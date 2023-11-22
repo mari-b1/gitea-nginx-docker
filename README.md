@@ -5,7 +5,7 @@
 - перед сервисом gitea должен быть запущен реверс прокси
 - доступ к сервису должен осуществляться по протоколу https
 
-A Docker Compose file for Gitea - Git with a cup of tea
+_Gitea - Git with a cup of tea_
 
 ## Требования
 
@@ -20,8 +20,8 @@ A Docker Compose file for Gitea - Git with a cup of tea
 ```
 $ docker-compose up -d
 ```
-Проверить, что все работает
+3. Проверить, что все работает
 ```
 $ docker ps
 ```
-3. Открыть в браузере установщик сервиса Gitea [http://localhost:3000](http://localhost:3000) и установить сервис.
+4. Открыть в браузере установщик сервиса Gitea [http://localhost:3000](http://localhost:3000) и установить сервис.
