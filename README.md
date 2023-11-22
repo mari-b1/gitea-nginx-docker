@@ -1,6 +1,6 @@
 # Docker-Compose-Gitea
 
-A Docker Compose file for Gitea - Git with a cup of tea ([gitea.io](https://gitea.io))
+A Docker Compose file for Gitea - Git with a cup of tea
 
 Data will be saved in separate docker volumes to enable easy upgrades!
 
