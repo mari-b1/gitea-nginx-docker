@@ -1,5 +1,10 @@
 # Docker-Compose-Gitea
 
+docker-compose.yaml в котором будет пониматься сервис gitea со следующими требование к сервису:
+- данные содержащиеся в репозитории должны храниться на хостовом сервере
+- перед сервисом gitea должен быть запущен реверс прокси
+- доступ к сервису должен осуществляться по протоколу https
+
 A Docker Compose file for Gitea - Git with a cup of tea
 
 Data will be saved in separate docker volumes to enable easy upgrades!
@@ -10,6 +15,11 @@ Data will be saved in separate docker volumes to enable easy upgrades!
 * docker-compose
 
 ## Getting Started
+
+1. Create a file named docker-compose.yaml and copy the above code into it.
+2. Replace /path/to/repositories with the path to the directory where you want to store your repositories on the host machine.
+3. Run docker-compose up -d to start the services in detached mode.
+4. Access Gitea at https://localhost.
 
 1. Copy **.env.dist** to **.env** and make your modifications
 2. Start docker containers:
@@ -40,9 +50,3 @@ The first registered user has admin privileges.
 |MYSQL_PASSWORD         | Password for MySQL user           |gitea          |
 
 
-## Create systemd unit
-1. Copy **docker-gitea.service.dist** to **docker-gitea.service**
-1. Adjust **WorkingDirectory** in service file if needed
-1. Create symbolic link: ``ln -s docker-gitea.service /etc/systemd/system/docker-gitea.service``
-1. Start service: ``systemctl start docker-gitea``
-1. (optional) Enable autostart at boot: ``systemctl enable docker-gitea``
